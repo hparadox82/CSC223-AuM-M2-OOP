@@ -1,7 +1,6 @@
 #Project 1: Parking Ticket Simulator
 from parkedcar import PCar
 from parkingmeter import PMeter
-from parkingticket import PTicket
 from police import Police
 
 
