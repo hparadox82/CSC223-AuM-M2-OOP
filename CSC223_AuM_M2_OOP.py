@@ -41,7 +41,7 @@ officer_b.inspect_car(car_b, meter_b)
 
 
 
-#Officer Kidman spots another car:
+#Scenario B: Officer Kidman spots another car that's been here for quite some time!
 car_c = PCar("Jeep", "Wrangler", "Olive", "NVR-DRTY")
 car_c.minspark = 480
 meter_c = PMeter(mins_buy = 60)
