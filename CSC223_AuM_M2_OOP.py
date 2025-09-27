@@ -1,1 +1,1 @@
-#hullo world
+#Project 2: Shapes Class Hierarchy
