@@ -2,17 +2,17 @@ import math
 
 from parkedcar import PCar
 from parkingmeter import PMeter
-from police import Police
 class PTicket:
     BASEFINE = 25.00
     HOURLYFINE = 10.00
 
-    def __init__(self, officer:Police, car: PCar, meter: PMeter):
+    def __init__(self, officer: 'Police', car: PCar, meter: PMeter):
         self.officer_name = officer.name
         self.officer_badge = officer.badge_num
         self.car_make = car.make
         self.car_model = car.model
         self.car_license = car.lic_no
+        self.car_color = car.color
         self.minspark = car.minspark
         self.mins_buy = meter.mins_buy
         self.fine = 0.0
@@ -33,14 +33,18 @@ class PTicket:
            print("\n--- PARKING VIOLATION ISSUED ---\n")
            print(f"Issuing Officer: {self.officer_name}, Badge No. {self.officer_badge}\n")
            print("--- VEHICLE INFO ---\n")
-           print(f"Make: {self.car_make}\nModel: {self.car_model}\nLicense: {self.car_license}")
-           print("\n--- VIOLATION DETAILS ---\n")
+           print(f"Make: {self.car_make}\nModel: {self.car_model}\nColor: {self.car_color}\nLicense: {self.car_license}")
+           print("\n--- VIOLATION DETAILS ---")
            print(f"Purchased Time: {self.mins_buy} minutes\nTime Parked: {self.minspark} minutes\n")
            print(f"CALCULATED FINE: ${self.fine:2f}")
-           print("---------------------------------")
+           print("---------------------------\n\n")
 
         else:
-            print ("No parking violation observed. Moving onto next vehicle.")
+            print ("\n--- NO VIOLATION ISSUED ---\n")
+            print(f"Issuing Officer: {self.officer_name}, Badge No. {self.officer_badge}\n")
+            print("--- VEHICLE INFO ---\n")
+            print(f"Make: {self.car_make}\nModel: {self.car_model}\nColor: {self.car_color}\nLicense: {self.car_license}")
+            print("\n--- COMMENTS: ---\nScheduled Patrol: No violation observed. \nThank you for your business.\n-----------------\n")
 
 
 
